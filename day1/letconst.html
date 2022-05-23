@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        function test() {
+            let a = 10;
+            let b = 20;
+            if(a < b) {
+                let c = 20;
+                const d = 50; // for constants you cannot change const
+                c = 80;
+                document.write('<p>accessing c & d inside if c = '+c+', d = '+d+'</p>');
+            }
+            document.write('<p>accessing d outside if = '+d+'</p>');
+        }
+        test();
+    </script>
+</body>
+</html>

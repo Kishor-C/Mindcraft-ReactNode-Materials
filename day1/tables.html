@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Employee Table</h2>
+    <script type = 'text/javascript'>
+        var emps = [
+            {id: 100, name: 'Raj', salary : 35200},
+            {id: 200, name: 'Vijay', salary: 42000},
+            {id: 300, name: 'Sachin', salary: 55000}
+        ];
+        document.write("<table border = '1'>");
+        document.write("<thead><th>Id</th><th>Name</th><th>Salary</th></thead>");
+        document.write("<tbody>");
+        for(var i = 0; i < emps.length; i++) {
+            document.write("<tr><td>"+emps[i].id
+            +"</td><td>"+emps[i].name
+            +"</td><td>"+emps[i].salary
+            +"</td></tr>");
+        }
+        document.write("</tbody>");
+        document.write("</table");
+    </script>
+    
+</body>
+</html>
