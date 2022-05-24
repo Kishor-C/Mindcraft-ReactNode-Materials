@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = 'text/javascript'>
+        let name = 'Raj';
+        let age = 35;
+        let salary = 45000;
+        // old approach of concatenating string with dynamic value
+        document.write('<p>Name = '+name+', Age = '+age+', Salary = '+salary+'</p>');
+        // new approach of concatenating string with dynamic value without + operator 
+        // using ${expression}
+        document.write(`<p>Name = ${name}, Age = ${age}, Salary = ${salary}</p>`);
+    </script>
+</body>
+</html>

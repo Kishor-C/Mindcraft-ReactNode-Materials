@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ECMA Script Features</h2>
+    <script type = 'text/javascript'>
+        let users = [
+            {name : 'Raj', address: {state:"KA", city:"BLR"}},
+            {name : 'Vijay'},
+            {name : 'Sachin', address: {state:"MH", city:"MBI"}},
+            
+        ]
+        users.forEach((item, index) => {
+            document.write(`<p>Name = ${item?.name}, 
+            State = ${item?.address?.state}, City = ${item?.address?.city}</p>`)
+        });
+        document.write(`<p>Exponential Operator: ${3 ** 3}</p>`)
+    </script>
+</body>
+</html>

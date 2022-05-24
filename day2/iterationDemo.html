@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iteration Demo</h1>
+    <button onclick = "myCall()">My Call</button>
+    <script type = 'text/javascript'>
+        function myCall() {
+            console.log('myCall begins...')
+            let items = [50, 20, 30, 40];
+            items.forEach(function(item, index) {
+                console.log('Item: '+item+', Index: '+index);
+            });
+            let anotherItems = items.map(function(item, index) {
+                return item * 2;
+            });
+            console.log('------------------');
+            anotherItems.forEach(function(item, index) {
+                console.log('Item: '+item+', Index: '+index);
+            })
+            console.log('myCall ends...');
+        }
+    </script>
+</body>
+</html>

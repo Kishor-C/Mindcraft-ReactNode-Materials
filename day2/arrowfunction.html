@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Demo on arrow functions</h2>
+    <script type = 'text/javascript'>
+        console.log('script begins');
+        setTimeout(() => console.log('asynchrouns call'), 5000);
+        console.log('script ends');
+        let items = [1, 2, 3, 4];
+        items.forEach((item, index) => console.log('item: '+item));
+        let anotherItems = items.map((item, index) => item * 100);
+        // if callback needs to use one parameter then you don't have to use ()
+        anotherItems.forEach(item => console.log(item))
+    </script>
+</body>
+</html>

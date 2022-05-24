@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example on Asynchronous operations</h1>
+    <button onclick = "myCall()">My Call</button>
+    <script type = 'text/javascript'>
+        function myCall() {
+            console.log('myCall begins');
+            test(); // synchrnous call
+            setTimeout(test, 2000); // test must be called after 2s
+            setTimeout(function() {
+                console.log('anonymous function starts');
+                console.log('anonymous function ends');
+            }, 5000); // anonymous funciton called after 5s
+            console.log('myCall ends'); 
+        }
+        function test() {
+            console.log('test called');
+            console.log('test ends');
+        }
+    </script>
+</body>
+</html>

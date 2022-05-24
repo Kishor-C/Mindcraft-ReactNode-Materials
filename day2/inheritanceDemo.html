@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Inheritance Demo</h2>
+    <script type = 'text/javascript'>
+        class Person {
+            constructor(n, a) {
+                this.name = n;
+                this.age = a;
+            }
+            display() {
+                document.write(`<p>Name = ${this.name}, Age = ${this.age}</p>`)
+            }
+        }
+        class Emp extends Person {
+            constructor(i, n, a) {
+                super(n, a); 
+                this.id = i;
+            }
+            display() {
+                document.write(`<p>Id = ${this.id}, Name = ${this.name}, Age = ${this.age}</p>`)
+            }
+        }
+        let p = new Person("Raj", 35);
+        p.display();
+        let e = new Emp(100, 'Ramesh', 34);
+        e.display();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Rest and Spread operators</h2>
+    <script type="text/javascript">
+        function add(a = 0, ...b) {
+            document.write('a = '+a+', b = '+b);
+        }
+        function test(x, y, ...z) {
+            document.write('x = '+x+', y = '+y+', z = '+z);
+        }
+        let items = [8, 10, 30, 40];
+        test(items); // test(x = items, y = undefined, z = [])
+        document.write('<p>------------</p>');
+        test(...items); // test(x = 8, y = 10, z = [30, 40])
+        
+    </script>
+</body>
+</html>
