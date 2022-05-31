@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
-
+import {Link, Route, Routes} from 'react-router-dom';
 function User() {
   let [id, setId] = useState('')
   let [user, setUser] = useState({id: '', name : '', salary: ''});
@@ -121,18 +121,20 @@ function UserForm() {
 function App() {
   return (
     <div className = "container-fluid">
-     <div className = "row">
-       <div className = 'col'>
-         <UserForm />
-       </div>
-       <div className = 'col'>
-         <UserList />
-       </div>
+     <div className = 'text-center'>
+      <h2>React for SPA</h2>
      </div>
-     <div className = 'row'>
-      <div className = 'col'>
-        <User />
-      </div>
+     <div>
+      <Link to = "/store">User Form</Link> /
+      <Link to = "/fetchAll">Show All Users</Link> /
+      <Link to = "/fetchUser">Fetch User By Id</Link>
+     </div>
+     <div>
+       <Routes>
+         <Route path = "/store" element = {<UserForm />} />
+         <Route path = "/fetchAll" element = {<UserList />} />
+         <Route path = "/fetchUser" element = {<User />} />
+       </Routes>
      </div>
     </div>
   );
