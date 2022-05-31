@@ -21,7 +21,7 @@ app.listen(port, () => console.log(`Server running at ${port}, restart if code c
 app.use(bodyParser.json());
 // post to store the json data
 app.post('/employee', (request, response) => {
-    // assuming data has name, age, salary
+    // assuming data has id, name, salary
     let data = request.body;
     let fileData = fs.readFileSync('users.json');
     let fileDataString = fileData.toString(); // json data
